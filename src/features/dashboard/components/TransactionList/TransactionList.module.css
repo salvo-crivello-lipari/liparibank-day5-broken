@@ -1,0 +1,114 @@
+.container {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.07);
+}
+
+.container.errorState {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  border-color: var(--color-danger);
+  background-color: var(--color-danger-bg);
+  color: var(--color-danger);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.loadingHeader {
+  height: 52px;
+  background: linear-gradient(90deg, #e5e7eb 25%, #f3f4f6 50%, #e5e7eb 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+.skeletonRow {
+  height: 64px;
+  margin: 0 1.5rem;
+  border-bottom: 1px solid var(--color-border);
+  background: linear-gradient(90deg, #f3f4f6 25%, #fafafa 50%, #f3f4f6 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.title { font-size: 1rem; font-weight: 600; color: var(--color-text); }
+
+.count {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  background-color: var(--color-bg);
+  padding: 0.2rem 0.625rem;
+  border-radius: 999px;
+  font-weight: 500;
+}
+
+.empty {
+  padding: 2rem 1.5rem;
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+}
+
+.list { padding: 0 1.5rem; }
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.875rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.item:last-child { border-bottom: none; }
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.2rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  width: fit-content;
+}
+
+.credit { background-color: var(--color-success-bg); color: var(--color-success); }
+.debit  { background-color: var(--color-danger-bg);  color: var(--color-danger); }
+
+.description { font-size: 0.9rem; font-weight: 500; color: var(--color-text); }
+.category    { font-size: 0.72rem; color: var(--color-text-muted); }
+
+.amount      { font-size: 0.95rem; font-weight: 700; }
+.amountCredit { color: var(--color-success); }
+.amountDebit  { color: var(--color-danger); }
+
+.date { font-size: 0.75rem; color: var(--color-text-muted); }

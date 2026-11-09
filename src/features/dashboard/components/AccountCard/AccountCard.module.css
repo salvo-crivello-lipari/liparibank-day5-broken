@@ -1,0 +1,92 @@
+.card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.07);
+}
+
+.card.error {
+  border-color: var(--color-danger);
+  background-color: var(--color-danger-bg);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.errorIcon { font-size: 1.25rem; }
+
+.errorText {
+  font-size: 0.875rem;
+  color: var(--color-danger);
+  font-weight: 500;
+}
+
+.skeleton {
+  height: 80px;
+  border-radius: 0.5rem;
+  background: linear-gradient(90deg, #e5e7eb 25%, #f3f4f6 50%, #e5e7eb 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 0.25rem;
+}
+
+.iban {
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+  font-family: monospace;
+}
+
+.typeBadge {
+  padding: 0.2rem 0.625rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background-color: var(--color-bg);
+  color: var(--color-text-muted);
+}
+
+.corrente { background-color: #eff6ff; color: var(--color-primary); }
+.deposito { background-color: var(--color-success-bg); color: var(--color-success); }
+.investimenti { background-color: var(--color-warning-bg); color: var(--color-warning); }
+
+.balanceRow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.balanceLabel {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.balanceValue {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
